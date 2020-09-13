@@ -7,6 +7,18 @@
         http://www.springframework.org/schema/util 
         http://www.springframework.org/schema/util/spring-util.xsd"> 
     <!-- bean definitions here -->
-	<bean id="trackCoach" class="com.di.TrackCoach"></bean>
-	<bean id="baseBallCoach" class="com.di.BaseBallCoach"></bean>	
+	
+	<!-- define dependency -->
+	<bean id="happyFortuneService" class="com.di.HappyFortuneService"></bean>
+	
+	<bean id="baseBallCoach" class="com.di.BaseBallCoach">
+		<constructor-arg ref="happyFortuneService"></constructor-arg>
+	</bean>	
+	
+	<bean id="trackCoach" class="com.di.TrackCoach">
+		<constructor-arg ref="happyFortuneService"></constructor-arg>
+	</bean>
+	
+	
+	
 </beans>
