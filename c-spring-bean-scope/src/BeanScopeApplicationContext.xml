@@ -18,7 +18,8 @@
 		class="com.scope.HappyFortuneService">
 	</bean>
 	
-	<bean id="baseBallCoach" class="com.scope.BaseBallCoach">
+	<!-- scope="prototype" | scope="singleton" -->
+	<bean id="baseBallCoach" class="com.scope.BaseBallCoach" scope="prototype">
 		<constructor-arg ref="happyFortuneService"></constructor-arg>
 	</bean>	
 	
