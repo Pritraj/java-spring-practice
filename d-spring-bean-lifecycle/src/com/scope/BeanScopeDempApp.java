@@ -13,6 +13,7 @@ public class BeanScopeDempApp {
 		Coach alfaCoach = context.getBean("baseBallCoach", Coach.class);
 		
 		System.out.println(theCoach.getDailyWorkOut());
+		System.out.println(alfaCoach.getDailyWorkOut());
 	
 		context.close();
 	}

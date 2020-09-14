@@ -19,7 +19,8 @@
 	</bean>
 	
 	<!-- scope="prototype" | scope="singleton" -->
-	<bean id="baseBallCoach" class="com.scope.BaseBallCoach" scope="prototype" init-method="doMyStartupStuff" destroy-method="doCleanupStuff">
+	<bean id="baseBallCoach" class="com.scope.BaseBallCoach" 
+		init-method="doMyStartupStuff" destroy-method="doCleanupStuff">
 		<constructor-arg ref="happyFortuneService"></constructor-arg>
 	</bean>	
 	
