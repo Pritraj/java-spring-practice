@@ -1,6 +1,5 @@
-package com.di;
+package com.annotation;
 
 public interface FortuneService {
 	public String getFortune();
-	
 }

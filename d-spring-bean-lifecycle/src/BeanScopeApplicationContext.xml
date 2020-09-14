@@ -19,6 +19,7 @@
 	</bean>
 	
 	<!-- scope="prototype" | scope="singleton" -->
+	<!-- for scope="prototype"  destroy-method will not get called as spring doesnt keep track of prototype scope objects-->
 	<bean id="baseBallCoach" class="com.scope.BaseBallCoach" 
 		init-method="doMyStartupStuff" destroy-method="doCleanupStuff">
 		<constructor-arg ref="happyFortuneService"></constructor-arg>
