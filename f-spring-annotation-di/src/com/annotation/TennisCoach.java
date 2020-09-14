@@ -1,6 +1,7 @@
 package com.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,7 +15,7 @@ public class TennisCoach implements Coach {
 
 
 	@Autowired // any injection
-	public void anyFortuneService(FortuneService fortuneService) {
+	public void anyFortuneService(@Qualifier("sadFortuneService") FortuneService fortuneService) {
 		System.out.println("::Tennis Coach : anyFortuneService");
 		this.fortuneService = fortuneService;
 	}
