@@ -14,7 +14,12 @@ public class SpringMyApp {
 		
 		//call method of bean
 		System.out.println(context.getBean("trackCoach", Coach.class).getDailyWorkOut());
+		//baseBallCoach uses Constructor Injection to inject MyFortuneService
 		System.out.println(context.getBean("trackCoach", Coach.class).getDailyFortune());
+		
+		//Get Literal Values  
+		System.out.println(context.getBean("trackCoach", TrackCoach.class).getEmailAdress());
+		System.out.println(context.getBean("trackCoach", TrackCoach.class).getTeam());
 		
 		System.out.println(context.getBean("baseBallCoach", Coach.class).getDailyWorkOut());
 		// baseBallCoach uses Constructor Injection to inject MyFortuneService
