@@ -13,21 +13,13 @@
    
 	<!-- bean definitions here -->
 	
-	<!-- load the properties file -->
-	<context:property-placeholder location="classpath:data.properties"/>
-	
 	<!-- define dependency -->
-	<bean id="happyFortuneService" class="com.scope.HappyFortuneService"></bean>
+	<bean id="happyFortuneService" 
+		class="com.scope.HappyFortuneService">
+	</bean>
 	
 	<bean id="baseBallCoach" class="com.scope.BaseBallCoach">
 		<constructor-arg ref="happyFortuneService"></constructor-arg>
 	</bean>	
 	
-	<bean id="trackCoach" class="com.scope.TrackCoach">
-		<property name="fortuneService" ref="happyFortuneService" ></property>
-		
-		<property name="emailAdress" value="${foo.email}"></property>
-		<property name="team" value="${foo.team}"></property>
-		
-	</bean>
 </beans>
