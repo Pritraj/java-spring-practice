@@ -8,8 +8,10 @@ public class BeanJavaDemoApp {
 		// load the spring configuration
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
 		
-		Coach theCoach = context.getBean("swimCoach", SwimCoach.class);
+		SwimCoach theCoach = context.getBean("swimCoach", SwimCoach.class);
 		System.out.println(theCoach.getDailyWorkOut());
+		System.out.println(theCoach.getEmail());
+		System.out.println(theCoach.getTeam());
 		System.out.println(theCoach.getDailyFortune());
 		
 		Coach theAlfaCoach = context.getBean("baseBallCoach", BaseBallCoach.class);
